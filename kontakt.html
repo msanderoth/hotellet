@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotellet - Kontakt</title>
+  <meta name="description"
+    content="Letar du efter kontaktuppgifter till Hotellet? Här hittar du kontaktformulär och öppettider.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <figure class="hotel-logo">
+      <img src="img/hotel-logo.svg" alt="Logga för Hotellet">
+    </figure>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="boka.html">Boka</a>
+      <a href="meny.html">Meny</a>
+      <a href="hitta.html">Hitta</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+      <h1>Kontakt</h1>
+    </div>
+    <div class=two-columns>
+      <section>
+        <h2>Öppettider</h2>
+        <p>Vår reception är bemannad mellan 06:00-22:00</p>
+        <p>Vill du ringa oss? Vår växel är öppen mellan 08:00-18:00</p>
+        <h2>Frågor</h2>
+        <p>Skicka gärna din fråga via vårt kontaktformulär!</p>
+        <p>Har du akuta frågor under din vistelse? Ring numret som finns i din bokningsbekräftelse</p>
+      </section>
+      <div class="section">
+        <form action="https://httpbin.org/post" method="post">
+          <fieldset>
+            <legend>Skicka ett meddelande till oss</legend>
+            <div>
+              <label for="name">För- och efternamn:</label>
+              <br>
+              <input type="text" id="name" placeholder="Namn Namnsson" name="name" required>
+            </div>
+            <div>
+              <label for="email">E-post:</label>
+              <br>
+              <input type="email" id="email" placeholder="namn@exempel.se" name="email" required>
+            </div>
+            <div>
+              <label for="phone-number">Telefonnummer:</label>
+              <br>
+              <input type="text" id="phone-number" placeholder="012-123 45 67" name="phone-number" required>
+            </div>
+            <div>
+              <label for="message">Meddelande:</label>
+              <br>
+              <textarea id="message" name=message maxlength="500" cols=40 rows=8></textarea>
+            </div>
+            <div>
+              <button type="submit">Skicka</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Hotellet | Hotellvägen 1 |</p>
+    <p>123 45 Storstad | 012-123 45 67</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotellet - Boka</title>
+  <meta name="description"
+    content="Hitta ditt perfekta hotellrum hos oss. Skicka en bokningsförfrågan så hittar vi ditt perfekta rum för garanterat bästa pris!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <figure class="hotel-logo">
+      <img src="img/hotel-logo.svg" alt="Logga för Hotellet">
+    </figure>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="boka.html">Boka</a>
+      <a href="meny.html">Meny</a>
+      <a href="hitta.html">Hitta</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">
+      <h1>Boka</h1>
+    </div>
+    <div class=two-columns>
+      <section>
+        <h2>Boka rum</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <fieldset>
+            <legend>Dina uppgifter</legend>
+            <div>
+              <label for="name">För- och efternamn:</label>
+              <br>
+              <input type="text" id="name" placeholder="Namn Namnsson" name="name" required>
+            </div>
+            <div>
+              <label for="email">E-post:</label>
+              <br>
+              <input type="email" id="email" placeholder="namn@exempel.se" name="email" required>
+            </div>
+            <div>
+              <label for="phone-number">Telefonnummer:</label>
+              <br>
+              <input type="text" id="phone-number" placeholder="012-123 45 67" name="phone-number" required>
+            </div>
+
+          </fieldset>
+          <fieldset>
+            <legend>Bokningsspreferenser</legend>
+            <div>
+              <label for="arrival">Startdatum</label>
+              <br>
+              <input type="date" id="arrival" name="arrival">
+            </div>
+            <div>
+              <label for="departure">Slutdatum</label>
+              <br>
+              <input type="date" id="departure" name="departure">
+            </div>
+            <div>
+              <label for="guest-amount">Antal gäster:</label>
+              <br>
+              <input type="number" id="guest-amount" name="guest-amount" max="50" min="0" required>
+            </div>
+            <div>
+              <label for="wishes">Övriga önskemål:</label>
+              <br>
+              <textarea id="wishes" name=wishes maxlength="300" cols=40 rows=4></textarea>
+            </div>
+            <div>
+              <label><input type="checkbox" name="accept" id="accept" value="accept">Jag förstår och accepterar
+                villkoren för bokning</label>
+            </div>
+            <div>
+              <button type="submit">Skicka</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h2>Så här kan ett rum se ut hos oss</h2>
+        <img src="img/hotel-room-l.webp"
+          srcset="img/hotel-room-l.webp 800w, img/hotel-room-m.webp 600w, img/hotel-room-s.webp 400w"
+          sizes="(max-width: 800px) 100vw, 50vw" alt="Ett av våra hotellrum">
+        <img src="img/hotel-bed-l.webp"
+          srcset="img/hotel-bed-l.webp 800w, img/hotel-bed-m.webp 600w, img/hotel-bed-s.webp 400w"
+          sizes="(max-width: 800px) 100vw, 50vw" alt="En av våra sängar">
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Hotellet | Hotellvägen 1 |</p>
+    <p>123 45 Storstad | 012-123 45 67</p>
+  </footer>
+</body>
+
+</html>
